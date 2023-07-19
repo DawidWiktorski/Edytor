@@ -156,7 +156,7 @@ def find_and_replace(file_path):
 def main():
     window = tk.Tk()
     
-    message = "Kontakt: dawidwiktorski@gmail.com\n\nWersja 0.1 (19.07.2023 r.)\n\nWYŁĄCZNIE pliki DOCX (nie mogą być otwarte w czasie wykonywania skryptu).\n\nAplikacja nie nadpisuje oryginalnego pliku i tworzy kopię w miejscu, w którym się znajduje (aplikacja).\n\nMimo to zalecam stworzyć kopię bezpieczeństwa.\n\nZe względu na charakter poprawek najlepiej wykonywać je na pliku przed czytaniem, w kodzie nie da się wszystkiego przewidzieć.\n\nUWAGA! Poprawione fragmenty stracą swoje formatowanie, należy je przywrócić ręcznie.\n\nGdy skrypt zakończy pracę, zostanie wyświetlony odpowiedni komunikat."
+    message = "Kontakt: dawidwiktorski@gmail.com\n\nWersja 0.1 (19.07.2023 r.)\n\nGNU AFFERO GENERAL PUBLIC LICENSE 3.0\n\nWYŁĄCZNIE pliki DOCX (nie mogą być otwarte w czasie wykonywania skryptu).\n\nAplikacja nie nadpisuje oryginalnego pliku i tworzy kopię w miejscu, w którym się znajduje (aplikacja).\n\nMimo to zalecam stworzyć kopię bezpieczeństwa.\n\nZe względu na charakter poprawek najlepiej wykonywać je na pliku przed czytaniem, w kodzie nie da się wszystkiego przewidzieć.\n\nUWAGA! Poprawione fragmenty stracą swoje formatowanie, należy je przywrócić ręcznie.\n\nGdy skrypt zakończy pracę, zostanie wyświetlony odpowiedni komunikat."
 
     msg_label = tk.Label(window, text=message)
     msg_label.pack()
