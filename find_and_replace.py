@@ -1,6 +1,6 @@
-import os
 import re
 import tkinter as tk
+from pathlib import Path
 from tkinter import filedialog, ttk, messagebox
 from docx import Document
 
@@ -8,7 +8,7 @@ def open_file_dialog():
     root = tk.Tk()
     root.withdraw()
     filetypes = (("Word documents", "*.docx"), ("All files", "*.*"))
-    file_path = filedialog.askopenfilename(filetypes=filetypes)
+    file_path = Path(filedialog.askopenfilename(filetypes=filetypes))
     return file_path
 
 def find_and_replace(file_path):
@@ -146,9 +146,9 @@ def find_and_replace(file_path):
             first_paragraph = doc.paragraphs[0]
             first_paragraph.text = first_paragraph.text.lstrip()
     
-    base = os.path.basename(file_path) 
-    name, ext = os.path.splitext(base) 
-    new_name = f"{name}_poprawki{ext}" 
+    base = file_path
+    name, ext = file_path.stem, file_path.suffix
+    new_name = f"{name}_poprawki{ext}"
 
     # Zapisz z nową nazwą
     doc.save(new_name)
